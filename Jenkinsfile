@@ -21,8 +21,11 @@ pipeline {
             }
         }
         stage('test'){
-            sh 'echo "testing..."'
+            steps{
+             sh 'echo "testing..."'
             sh 'test -f build/index.html'
+            }
+         
         }
     }
 }
